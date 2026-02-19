@@ -12,6 +12,7 @@ enum Role {
   admin
 }
 
+ codex/build-production-ready-ai-web-app-9asrgs
 enum TitleType {
   movie
   series
@@ -223,4 +224,22 @@ model Watched {
   movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
 
   @@id([userId, movieId])
+=======
+model User {
+  id        String     @id @default(uuid())
+  name      String
+  email     String     @unique
+  password  String
+  role      Role       @default(user)
+  createdAt DateTime   @default(now())
+  activities Activity[]
+}
+
+model Activity {
+  id        String   @id @default(uuid())
+  userId    String
+  action    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+ main
 }

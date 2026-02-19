@@ -5,11 +5,15 @@
   "scripts": {
     "dev": "npm run dev -w frontend & npm run dev -w backend",
     "build": "npm run build -w frontend && npm run build -w backend",
+ codex/build-production-ready-ai-web-app-9asrgs
     "lint": "npm run lint -w frontend && npm run lint -w backend",
     "db:generate": "prisma generate",
     "db:push": "prisma db push"
   },
   "devDependencies": {
     "prisma": "^5.16.2"
+=======
+    "lint": "npm run lint -w frontend && npm run lint -w backend"
+ main
   }
 }

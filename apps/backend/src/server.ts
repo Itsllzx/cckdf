@@ -8,11 +8,14 @@ import { authRouter } from './modules/auth/auth.routes';
 import { userRouter } from './modules/users/user.routes';
 import { activityRouter } from './modules/activity/activity.routes';
 import { adminRouter } from './modules/admin/admin.routes';
+ codex/build-production-ready-ai-web-app-9asrgs
 import { moviesRouter } from './modules/movies/movies.routes';
 import { ratingsRouter } from './modules/ratings/ratings.routes';
 import { recommendationsRouter } from './modules/recommendations/recommendations.routes';
 import { playlistsRouter } from './modules/playlists/playlists.routes';
 import { socialRouter } from './modules/social/social.routes';
+=======
+ main
 import { errorHandler } from './middleware/errorHandler';
 
 const app = express();
@@ -28,12 +31,15 @@ app.use('/auth', authRouter);
 app.use('/users', userRouter);
 app.use('/activity', activityRouter);
 app.use('/admin', adminRouter);
+ codex/build-production-ready-ai-web-app-9asrgs
 app.use('/movies', moviesRouter);
 app.use('/ratings', ratingsRouter);
 app.use('/', ratingsRouter);
 app.use('/recommendations', recommendationsRouter);
 app.use('/playlists', playlistsRouter);
 app.use('/', socialRouter);
+=======
+ main
 app.use(errorHandler);
 
 app.listen(env.port, () => {
